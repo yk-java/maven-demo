@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.glens.dao.DistributionNetworkReportMapper">
+  <resultMap id="BaseResultMap" type="com.glens.model.DistributionNetworkReport">
+    <result column="reserve_requirements" jdbcType="DECIMAL" property="reserveRequirements" />
+    <result column="capital" jdbcType="DECIMAL" property="capital" />
+    <result column="cost" jdbcType="DECIMAL" property="cost" />
+    <result column="total" jdbcType="DECIMAL" property="total" />
+    <result column="grid_reserve_quantity" jdbcType="INTEGER" property="gridReserveQuantity" />
+    <result column="grid_reserve_amount" jdbcType="DECIMAL" property="gridReserveAmount" />
+    <result column="noGrid_reserve_quantity" jdbcType="INTEGER" property="nogridReserveQuantity" />
+    <result column="noGrid_reserve_amount" jdbcType="DECIMAL" property="nogridReserveAmount" />
+    <result column="report_proportion" jdbcType="DECIMAL" property="reportProportion" />
+    <result column="evaluation_amount" jdbcType="DECIMAL" property="evaluationAmount" />
+    <result column="review_ratio" jdbcType="DECIMAL" property="reviewRatio" />
+    <result column="through_amount" jdbcType="DECIMAL" property="throughAmount" />
+    <result column="pass_rate" jdbcType="DECIMAL" property="passRate" />
+    <result column="reserve_ratio" jdbcType="DECIMAL" property="reserveRatio" />
+  </resultMap>
+  <insert id="insert" parameterType="com.glens.model.DistributionNetworkReport">
+    insert into distributionnetworkreport (reserve_requirements, capital, cost, 
+      total, grid_reserve_quantity, grid_reserve_amount, 
+      noGrid_reserve_quantity, noGrid_reserve_amount, 
+      report_proportion, evaluation_amount, review_ratio, 
+      through_amount, pass_rate, reserve_ratio
+      )
+    values (#{reserveRequirements,jdbcType=DECIMAL}, #{capital,jdbcType=DECIMAL}, #{cost,jdbcType=DECIMAL}, 
+      #{total,jdbcType=DECIMAL}, #{gridReserveQuantity,jdbcType=INTEGER}, #{gridReserveAmount,jdbcType=DECIMAL}, 
+      #{nogridReserveQuantity,jdbcType=INTEGER}, #{nogridReserveAmount,jdbcType=DECIMAL}, 
+      #{reportProportion,jdbcType=DECIMAL}, #{evaluationAmount,jdbcType=DECIMAL}, #{reviewRatio,jdbcType=DECIMAL}, 
+      #{throughAmount,jdbcType=DECIMAL}, #{passRate,jdbcType=DECIMAL}, #{reserveRatio,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.glens.model.DistributionNetworkReport">
+    insert into distributionnetworkreport
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="reserveRequirements != null">
+        reserve_requirements,
+      </if>
+      <if test="capital != null">
+        capital,
+      </if>
+      <if test="cost != null">
+        cost,
+      </if>
+      <if test="total != null">
+        total,
+      </if>
+      <if test="gridReserveQuantity != null">
+        grid_reserve_quantity,
+      </if>
+      <if test="gridReserveAmount != null">
+        grid_reserve_amount,
+      </if>
+      <if test="nogridReserveQuantity != null">
+        noGrid_reserve_quantity,
+      </if>
+      <if test="nogridReserveAmount != null">
+        noGrid_reserve_amount,
+      </if>
+      <if test="reportProportion != null">
+        report_proportion,
+      </if>
+      <if test="evaluationAmount != null">
+        evaluation_amount,
+      </if>
+      <if test="reviewRatio != null">
+        review_ratio,
+      </if>
+      <if test="throughAmount != null">
+        through_amount,
+      </if>
+      <if test="passRate != null">
+        pass_rate,
+      </if>
+      <if test="reserveRatio != null">
+        reserve_ratio,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="reserveRequirements != null">
+        #{reserveRequirements,jdbcType=DECIMAL},
+      </if>
+      <if test="capital != null">
+        #{capital,jdbcType=DECIMAL},
+      </if>
+      <if test="cost != null">
+        #{cost,jdbcType=DECIMAL},
+      </if>
+      <if test="total != null">
+        #{total,jdbcType=DECIMAL},
+      </if>
+      <if test="gridReserveQuantity != null">
+        #{gridReserveQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="gridReserveAmount != null">
+        #{gridReserveAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="nogridReserveQuantity != null">
+        #{nogridReserveQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="nogridReserveAmount != null">
+        #{nogridReserveAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="reportProportion != null">
+        #{reportProportion,jdbcType=DECIMAL},
+      </if>
+      <if test="evaluationAmount != null">
+        #{evaluationAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="reviewRatio != null">
+        #{reviewRatio,jdbcType=DECIMAL},
+      </if>
+      <if test="throughAmount != null">
+        #{throughAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="passRate != null">
+        #{passRate,jdbcType=DECIMAL},
+      </if>
+      <if test="reserveRatio != null">
+        #{reserveRatio,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+</mapper>

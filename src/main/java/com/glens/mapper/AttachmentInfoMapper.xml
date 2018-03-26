@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.glens.dao.AttachmentInfoMapper">
+  <resultMap id="BaseResultMap" type="com.glens.model.AttachmentInfo">
+    <id column="attach_id" jdbcType="INTEGER" property="attachId" />
+    <result column="attach_save_path" jdbcType="VARCHAR" property="attachSavePath" />
+    <result column="attach_save_name" jdbcType="VARCHAR" property="attachSaveName" />
+    <result column="attach_save_time" jdbcType="TIMESTAMP" property="attachSaveTime" />
+    <result column="attach_type" jdbcType="VARCHAR" property="attachType" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    attach_id, attach_save_path, attach_save_name, attach_save_time, attach_type
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from attachmentinfo
+    where attach_id = #{attachId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectLists" parameterType="com.glens.model.AttachmentInfo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from attachmentinfo
+    <where>
+      <if test="attachSavePath != null ">
+        attach_save_path = #{attachSavePath}
+      </if>
+      <if test="attachType != null ">
+       and attach_type = #{attachType}
+      </if>
+      <if test="attachSaveName !=null ">
+        attach_save_name = #{attachSaveName}
+      </if>
+    </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from attachmentinfo
+    where attach_id = #{attachId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.glens.model.AttachmentInfo">
+    insert into attachmentinfo (attach_id, attach_save_path, attach_save_name, 
+      attach_save_time, attach_type)
+    values (#{attachId,jdbcType=INTEGER}, #{attachSavePath,jdbcType=VARCHAR}, #{attachSaveName,jdbcType=VARCHAR}, 
+      #{attachSaveTime,jdbcType=TIMESTAMP}, #{attachType,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.glens.model.AttachmentInfo">
+    insert into attachmentinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="attachId != null">
+        attach_id,
+      </if>
+      <if test="attachSavePath != null">
+        attach_save_path,
+      </if>
+      <if test="attachSaveName != null">
+        attach_save_name,
+      </if>
+      <if test="attachSaveTime != null">
+        attach_save_time,
+      </if>
+      <if test="attachType != null">
+        attach_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="attachId != null">
+        #{attachId,jdbcType=INTEGER},
+      </if>
+      <if test="attachSavePath != null">
+        #{attachSavePath,jdbcType=VARCHAR},
+      </if>
+      <if test="attachSaveName != null">
+        #{attachSaveName,jdbcType=VARCHAR},
+      </if>
+      <if test="attachSaveTime != null">
+        #{attachSaveTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="attachType != null">
+        #{attachType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.glens.model.AttachmentInfo">
+    update attachmentinfo
+    <set>
+      <if test="attachSavePath != null">
+        attach_save_path = #{attachSavePath,jdbcType=VARCHAR},
+      </if>
+      <if test="attachSaveName != null">
+        attach_save_name = #{attachSaveName,jdbcType=VARCHAR},
+      </if>
+      <if test="attachSaveTime != null">
+        attach_save_time = #{attachSaveTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="attachType != null">
+        attach_type = #{attachType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where attach_id = #{attachId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.glens.model.AttachmentInfo">
+    update attachmentinfo
+    set attach_save_path = #{attachSavePath,jdbcType=VARCHAR},
+      attach_save_name = #{attachSaveName,jdbcType=VARCHAR},
+      attach_save_time = #{attachSaveTime,jdbcType=TIMESTAMP},
+      attach_type = #{attachType,jdbcType=VARCHAR}
+    where attach_id = #{attachId,jdbcType=INTEGER}
+  </update>
+</mapper>

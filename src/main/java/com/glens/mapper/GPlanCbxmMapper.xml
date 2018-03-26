@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.glens.dao.GPlanCbxmMapper">
+  <resultMap id="BaseResultMap" type="com.glens.model.GPlanCbxm">
+    <id column="PrjID" jdbcType="VARCHAR" property="prjid" />
+    <result column="SSDateTime" jdbcType="TIMESTAMP" property="ssdatetime" />
+    <result column="ParentPrjID" jdbcType="VARCHAR" property="parentprjid" />
+    <result column="PrjType" jdbcType="VARCHAR" property="prjtype" />
+    <result column="PrjBH" jdbcType="VARCHAR" property="prjbh" />
+    <result column="PrjName" jdbcType="VARCHAR" property="prjname" />
+    <result column="PrjLX" jdbcType="VARCHAR" property="prjlx" />
+    <result column="PrjYear" jdbcType="VARCHAR" property="prjyear" />
+    <result column="JD" jdbcType="CHAR" property="jd" />
+    <result column="PrjXZ" jdbcType="CHAR" property="prjxz" />
+    <result column="BuildReason" jdbcType="VARCHAR" property="buildreason" />
+    <result column="Build_Info" jdbcType="VARCHAR" property="buildInfo" />
+    <result column="PlanRegionName" jdbcType="VARCHAR" property="planregionname" />
+    <result column="PlanRegionCode" jdbcType="VARCHAR" property="planregioncode" />
+    <result column="AddDateTime" jdbcType="TIMESTAMP" property="adddatetime" />
+    <result column="AddRYJC" jdbcType="VARCHAR" property="addryjc" />
+    <result column="BZ" jdbcType="VARCHAR" property="bz" />
+    <result column="KGG" jdbcType="INTEGER" property="kgg" />
+    <result column="JKCD" jdbcType="DOUBLE" property="jkcd" />
+    <result column="DLCD" jdbcType="DOUBLE" property="dlcd" />
+    <result column="HWGNum" jdbcType="INTEGER" property="hwgnum" />
+    <result column="KGZNum" jdbcType="INTEGER" property="kgznum" />
+    <result column="FZXNum" jdbcType="INTEGER" property="fzxnum" />
+    <result column="ZSKGNum" jdbcType="INTEGER" property="zskgnum" />
+    <result column="PDSRL" jdbcType="DOUBLE" property="pdsrl" />
+    <result column="PDSNum" jdbcType="INTEGER" property="pdsnum" />
+    <result column="XSBRL" jdbcType="DOUBLE" property="xsbrl" />
+    <result column="XSBNum" jdbcType="INTEGER" property="xsbnum" />
+    <result column="BYQRL" jdbcType="DOUBLE" property="byqrl" />
+    <result column="BYQNum" jdbcType="INTEGER" property="byqnum" />
+    <result column="DLTDCD" jdbcType="DOUBLE" property="dltdcd" />
+    <result column="DYXLCD" jdbcType="DOUBLE" property="dyxlcd" />
+    <result column="DYDLCD" jdbcType="DOUBLE" property="dydlcd" />
+    <result column="DYFZXNum" jdbcType="INTEGER" property="dyfzxnum" />
+    <result column="DYPDGNum" jdbcType="INTEGER" property="dypdgnum" />
+    <result column="TotalFee" jdbcType="DOUBLE" property="totalfee" />
+    <result column="ZHPDX" jdbcType="INTEGER" property="zhpdx" />
+    <result column="FHGGNUMDY" jdbcType="INTEGER" property="fhggnumdy" />
+    <result column="WGBCDY" jdbcType="INTEGER" property="wgbcdy" />
+    <result column="JXH" jdbcType="DOUBLE" property="jxh" />
+    <result column="JHDLCDDY" jdbcType="DOUBLE" property="jhdlcddy" />
+    <result column="Status" jdbcType="CHAR" property="status" />
+    <result column="PGNR" jdbcType="VARCHAR" property="pgnr" />
+    <result column="ProjectLocation" jdbcType="VARCHAR" property="projectlocation" />
+    <result column="PLNR" jdbcType="VARCHAR" property="plnr" />
+    <result column="DGNum" jdbcType="INTEGER" property="dgnum" />
+    <result column="GDSName" jdbcType="VARCHAR" property="gdsname" />
+    <result column="PrjLevel" jdbcType="VARCHAR" property="prjlevel" />
+    <result column="IsCooroperative" jdbcType="VARCHAR" property="iscooroperative" />
+    <result column="JKDXTYPE" jdbcType="VARCHAR" property="jkdxtype" />
+    <result column="JKPOLENUM" jdbcType="INTEGER" property="jkpolenum" />
+    <result column="DLTYPE" jdbcType="VARCHAR" property="dltype" />
+    <result column="DLDESINGNTYPE" jdbcType="VARCHAR" property="dldesingntype" />
+    <result column="GLLENGTH" jdbcType="INTEGER" property="gllength" />
+    <result column="GDEVICE" jdbcType="INTEGER" property="gdevice" />
+    <result column="WILELESSNUM" jdbcType="INTEGER" property="wilelessnum" />
+    <result column="DTUNUM" jdbcType="INTEGER" property="dtunum" />
+    <result column="FTUNUM" jdbcType="INTEGER" property="ftunum" />
+    <result column="TwoDESIGN" jdbcType="INTEGER" property="twodesign" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="ExpectResults" jdbcType="VARCHAR" property="expectresults" />
+    <result column="IS_TRANSFER_BB" jdbcType="VARCHAR" property="isTransferBb" />
+    <result column="PROJECT_CODE" jdbcType="VARCHAR" property="projectCode" />
+    <result column="NEED_RAISE_UNIT" jdbcType="VARCHAR" property="needRaiseUnit" />
+    <result column="PRIMARY_PROJECT_NAME" jdbcType="VARCHAR" property="primaryProjectName" />
+    <result column="IS_NEED_REDLINE_REPLY" jdbcType="VARCHAR" property="isNeedRedlineReply" />
+    <result column="IS_PROCEDURE_READY" jdbcType="VARCHAR" property="isProcedureReady" />
+    <result column="IS_IMAGE" jdbcType="VARCHAR" property="isImage" />
+    <result column="IS_CLIMAX_PROJECT" jdbcType="VARCHAR" property="isClimaxProject" />
+    <result column="CONTACT_PERSON" jdbcType="VARCHAR" property="contactPerson" />
+    <result column="DESIGN_COMPANY" jdbcType="VARCHAR" property="designCompany" />
+    <result column="PROJECT_MANAGER" jdbcType="VARCHAR" property="projectManager" />
+    <result column="PROJECT_STATE_BB" jdbcType="VARCHAR" property="projectStateBb" />
+    <result column="GROSS_INVESTMENT" jdbcType="DOUBLE" property="grossInvestment" />
+    <result column="SQPSTime" jdbcType="TIMESTAMP" property="sqpstime" />
+    <result column="PSTGTime" jdbcType="TIMESTAMP" property="pstgtime" />
+    <result column="IS_ARRANGEMENT" jdbcType="VARCHAR" property="isArrangement" />
+    <result column="PROBLEM_SCORE" jdbcType="DOUBLE" property="problemScore" />
+    <result column="JKXL_DHXJ" jdbcType="DOUBLE" property="jkxlDhxj" />
+    <result column="JKXL_TGSHUANGHXJ" jdbcType="DOUBLE" property="jkxlTgshuanghxj" />
+    <result column="JKXL_TGSIHXJ" jdbcType="DOUBLE" property="jkxlTgsihxj" />
+    <result column="JKXL_DHGZ" jdbcType="DOUBLE" property="jkxlDhgz" />
+    <result column="JKXL_TGSHUANGHGZ" jdbcType="DOUBLE" property="jkxlTgshuanghgz" />
+    <result column="JKXL_TGSIHGZ" jdbcType="DOUBLE" property="jkxlTgsihgz" />
+    <result column="JKXL_GGG" jdbcType="DOUBLE" property="jkxlGgg" />
+    <result column="DL_JM400" jdbcType="DOUBLE" property="dlJm400" />
+    <result column="DL_JM240" jdbcType="DOUBLE" property="dlJm240" />
+    <result column="DLTD_4K" jdbcType="DOUBLE" property="dltd4k" />
+    <result column="DLTD_6K" jdbcType="DOUBLE" property="dltd6k" />
+    <result column="DLTD_8K" jdbcType="DOUBLE" property="dltd8k" />
+    <result column="DLTD_9K" jdbcType="DOUBLE" property="dltd9k" />
+    <result column="DLTD_12K" jdbcType="DOUBLE" property="dltd12k" />
+    <result column="DLTD_16K" jdbcType="DOUBLE" property="dltd16k" />
+    <result column="DLTD_24K" jdbcType="DOUBLE" property="dltd24k" />
+    <result column="DLTD_LG4K" jdbcType="DOUBLE" property="dltdLg4k" />
+    <result column="DLTD_LG7K" jdbcType="DOUBLE" property="dltdLg7k" />
+    <result column="DLJ_ZT" jdbcType="INTEGER" property="dljZt" />
+    <result column="DLJ_ZJ" jdbcType="INTEGER" property="dljZj" />
+    <result column="DLJ_SANJ" jdbcType="INTEGER" property="dljSanj" />
+    <result column="DLJ_SIJ" jdbcType="INTEGER" property="dljSij" />
+    <result column="DYJKXL_DHXJ" jdbcType="DOUBLE" property="dyjkxlDhxj" />
+    <result column="DYJKXL_TGSHXJ" jdbcType="DOUBLE" property="dyjkxlTgshxj" />
+    <result column="DYJKXL_DHGZ" jdbcType="DOUBLE" property="dyjkxlDhgz" />
+    <result column="DYJKXL_TGSHGZ" jdbcType="DOUBLE" property="dyjkxlTgshgz" />
+    <result column="DYDL_JM240" jdbcType="DOUBLE" property="dydlJm240" />
+    <result column="DYDL_JM150" jdbcType="DOUBLE" property="dydlJm150" />
+    <result column="BYQ_GSB200" jdbcType="INTEGER" property="byqGsb200" />
+    <result column="BYQ_GSB400" jdbcType="INTEGER" property="byqGsb400" />
+    <result column="BYQ_XB315" jdbcType="INTEGER" property="byqXb315" />
+    <result column="BYQ_XB500" jdbcType="INTEGER" property="byqXb500" />
+    <result column="BYQ_XB204" jdbcType="INTEGER" property="byqXb204" />
+    <result column="BYQ_PDF800" jdbcType="INTEGER" property="byqPdf800" />
+    <result column="BYQ_PDF1000" jdbcType="INTEGER" property="byqPdf1000" />
+    <result column="BYQ_PDF1250" jdbcType="INTEGER" property="byqPdf1250" />
+    <result column="HWHWG_2J2C" jdbcType="INTEGER" property="hwhwg2j2c" />
+    <result column="HWHWG_2J4C" jdbcType="INTEGER" property="hwhwg2j4c" />
+    <result column="ZSKG_ZDH" jdbcType="INTEGER" property="zskgZdh" />
+    <result column="HNKGG_ZDH" jdbcType="INTEGER" property="hnkggZdh" />
+    <result column="SQPSTimeIsUpdate" jdbcType="INTEGER" property="sqpstimeisupdate" />
+    <result column="BackStatus" jdbcType="VARCHAR" property="backstatus" />
+    <result column="BackFee" jdbcType="DOUBLE" property="backfee" />
+    <result column="YLXTIME" jdbcType="TIMESTAMP" property="ylxtime" />
+    <result column="Equipment_Switch" jdbcType="VARCHAR" property="equipmentSwitch" />
+    <result column="DeleteByGLGJ" jdbcType="VARCHAR" property="deletebyglgj" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.glens.model.GPlanCbxmWithBLOBs">
+    <result column="OldData" jdbcType="LONGVARCHAR" property="olddata" />
+    <result column="NowData" jdbcType="LONGVARCHAR" property="nowdata" />
+    <result column="ProblemStatus" jdbcType="LONGVARCHAR" property="problemstatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    PrjID, SSDateTime, ParentPrjID, PrjType, PrjBH, PrjName, PrjLX, PrjYear, JD, PrjXZ, 
+    BuildReason, Build_Info, PlanRegionName, PlanRegionCode, AddDateTime, AddRYJC, BZ, 
+    KGG, JKCD, DLCD, HWGNum, KGZNum, FZXNum, ZSKGNum, PDSRL, PDSNum, XSBRL, XSBNum, BYQRL, 
+    BYQNum, DLTDCD, DYXLCD, DYDLCD, DYFZXNum, DYPDGNum, TotalFee, ZHPDX, FHGGNUMDY, WGBCDY, 
+    JXH, JHDLCDDY, Status, PGNR, ProjectLocation, PLNR, DGNum, GDSName, PrjLevel, IsCooroperative, 
+    JKDXTYPE, JKPOLENUM, DLTYPE, DLDESINGNTYPE, GLLENGTH, GDEVICE, WILELESSNUM, DTUNUM, 
+    FTUNUM, TwoDESIGN, TYPE, ExpectResults, IS_TRANSFER_BB, PROJECT_CODE, NEED_RAISE_UNIT, 
+    PRIMARY_PROJECT_NAME, IS_NEED_REDLINE_REPLY, IS_PROCEDURE_READY, IS_IMAGE, IS_CLIMAX_PROJECT, 
+    CONTACT_PERSON, DESIGN_COMPANY, PROJECT_MANAGER, PROJECT_STATE_BB, GROSS_INVESTMENT, 
+    SQPSTime, PSTGTime, IS_ARRANGEMENT, PROBLEM_SCORE, JKXL_DHXJ, JKXL_TGSHUANGHXJ, JKXL_TGSIHXJ, 
+    JKXL_DHGZ, JKXL_TGSHUANGHGZ, JKXL_TGSIHGZ, JKXL_GGG, DL_JM400, DL_JM240, DLTD_4K, 
+    DLTD_6K, DLTD_8K, DLTD_9K, DLTD_12K, DLTD_16K, DLTD_24K, DLTD_LG4K, DLTD_LG7K, DLJ_ZT, 
+    DLJ_ZJ, DLJ_SANJ, DLJ_SIJ, DYJKXL_DHXJ, DYJKXL_TGSHXJ, DYJKXL_DHGZ, DYJKXL_TGSHGZ, 
+    DYDL_JM240, DYDL_JM150, BYQ_GSB200, BYQ_GSB400, BYQ_XB315, BYQ_XB500, BYQ_XB204, 
+    BYQ_PDF800, BYQ_PDF1000, BYQ_PDF1250, HWHWG_2J2C, HWHWG_2J4C, ZSKG_ZDH, HNKGG_ZDH, 
+    SQPSTimeIsUpdate, BackStatus, BackFee, YLXTIME, Equipment_Switch, DeleteByGLGJ
+  </sql>
+  <sql id="Blob_Column_List">
+    OldData, NowData, ProblemStatus
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from g_plan_cbxm
+    where PrjID = #{prjid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByParameter" parameterType="com.glens.model.GPlanCbxmWithBLOBs" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from g_plan_cbxm
+    <where>
+      <if test="prjid != null">
+        PrjID = #{prjid,jdbcType=VARCHAR}
+      </if>
+      <if test="status != null">
+        and Status = #{status,jdbcType=CHAR}
+      </if>
+    </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from g_plan_cbxm
+    where PrjID = #{prjid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.glens.model.GPlanCbxmWithBLOBs">
+    insert into g_plan_cbxm (PrjID, SSDateTime, ParentPrjID, 
+      PrjType, PrjBH, PrjName, 
+      PrjLX, PrjYear, JD, PrjXZ, 
+      BuildReason, Build_Info, PlanRegionName, 
+      PlanRegionCode, AddDateTime, AddRYJC, 
+      BZ, KGG, JKCD, DLCD, 
+      HWGNum, KGZNum, FZXNum, 
+      ZSKGNum, PDSRL, PDSNum, 
+      XSBRL, XSBNum, BYQRL, 
+      BYQNum, DLTDCD, DYXLCD, 
+      DYDLCD, DYFZXNum, DYPDGNum, 
+      TotalFee, ZHPDX, FHGGNUMDY, 
+      WGBCDY, JXH, JHDLCDDY, 
+      Status, PGNR, ProjectLocation, 
+      PLNR, DGNum, GDSName, 
+      PrjLevel, IsCooroperative, JKDXTYPE, 
+      JKPOLENUM, DLTYPE, DLDESINGNTYPE, 
+      GLLENGTH, GDEVICE, WILELESSNUM, 
+      DTUNUM, FTUNUM, TwoDESIGN, 
+      TYPE, ExpectResults, IS_TRANSFER_BB, 
+      PROJECT_CODE, NEED_RAISE_UNIT, PRIMARY_PROJECT_NAME, 
+      IS_NEED_REDLINE_REPLY, IS_PROCEDURE_READY, IS_IMAGE, 
+      IS_CLIMAX_PROJECT, CONTACT_PERSON, DESIGN_COMPANY, 
+      PROJECT_MANAGER, PROJECT_STATE_BB, GROSS_INVESTMENT, 
+      SQPSTime, PSTGTime, IS_ARRANGEMENT, 
+      PROBLEM_SCORE, JKXL_DHXJ, JKXL_TGSHUANGHXJ, 
+      JKXL_TGSIHXJ, JKXL_DHGZ, JKXL_TGSHUANGHGZ, 
+      JKXL_TGSIHGZ, JKXL_GGG, DL_JM400, 
+      DL_JM240, DLTD_4K, DLTD_6K, 
+      DLTD_8K, DLTD_9K, DLTD_12K, 
+      DLTD_16K, DLTD_24K, DLTD_LG4K, 
+      DLTD_LG7K, DLJ_ZT, DLJ_ZJ, 
+      DLJ_SANJ, DLJ_SIJ, DYJKXL_DHXJ, 
+      DYJKXL_TGSHXJ, DYJKXL_DHGZ, DYJKXL_TGSHGZ, 
+      DYDL_JM240, DYDL_JM150, BYQ_GSB200, 
+      BYQ_GSB400, BYQ_XB315, BYQ_XB500, 
+      BYQ_XB204, BYQ_PDF800, BYQ_PDF1000, 
+      BYQ_PDF1250, HWHWG_2J2C, HWHWG_2J4C, 
+      ZSKG_ZDH, HNKGG_ZDH, SQPSTimeIsUpdate, 
+      BackStatus, BackFee, YLXTIME, 
+      Equipment_Switch, DeleteByGLGJ, OldData, 
+      NowData, ProblemStatus)
+    values (#{prjid,jdbcType=VARCHAR}, #{ssdatetime,jdbcType=TIMESTAMP}, #{parentprjid,jdbcType=VARCHAR}, 
+      #{prjtype,jdbcType=VARCHAR}, #{prjbh,jdbcType=VARCHAR}, #{prjname,jdbcType=VARCHAR}, 
+      #{prjlx,jdbcType=VARCHAR}, #{prjyear,jdbcType=VARCHAR}, #{jd,jdbcType=CHAR}, #{prjxz,jdbcType=CHAR}, 
+      #{buildreason,jdbcType=VARCHAR}, #{buildInfo,jdbcType=VARCHAR}, #{planregionname,jdbcType=VARCHAR}, 
+      #{planregioncode,jdbcType=VARCHAR}, #{adddatetime,jdbcType=TIMESTAMP}, #{addryjc,jdbcType=VARCHAR}, 
+      #{bz,jdbcType=VARCHAR}, #{kgg,jdbcType=INTEGER}, #{jkcd,jdbcType=DOUBLE}, #{dlcd,jdbcType=DOUBLE}, 
+      #{hwgnum,jdbcType=INTEGER}, #{kgznum,jdbcType=INTEGER}, #{fzxnum,jdbcType=INTEGER}, 
+      #{zskgnum,jdbcType=INTEGER}, #{pdsrl,jdbcType=DOUBLE}, #{pdsnum,jdbcType=INTEGER}, 
+      #{xsbrl,jdbcType=DOUBLE}, #{xsbnum,jdbcType=INTEGER}, #{byqrl,jdbcType=DOUBLE}, 
+      #{byqnum,jdbcType=INTEGER}, #{dltdcd,jdbcType=DOUBLE}, #{dyxlcd,jdbcType=DOUBLE}, 
+      #{dydlcd,jdbcType=DOUBLE}, #{dyfzxnum,jdbcType=INTEGER}, #{dypdgnum,jdbcType=INTEGER}, 
+      #{totalfee,jdbcType=DOUBLE}, #{zhpdx,jdbcType=INTEGER}, #{fhggnumdy,jdbcType=INTEGER}, 
+      #{wgbcdy,jdbcType=INTEGER}, #{jxh,jdbcType=DOUBLE}, #{jhdlcddy,jdbcType=DOUBLE}, 
+      #{status,jdbcType=CHAR}, #{pgnr,jdbcType=VARCHAR}, #{projectlocation,jdbcType=VARCHAR}, 
+      #{plnr,jdbcType=VARCHAR}, #{dgnum,jdbcType=INTEGER}, #{gdsname,jdbcType=VARCHAR}, 
+      #{prjlevel,jdbcType=VARCHAR}, #{iscooroperative,jdbcType=VARCHAR}, #{jkdxtype,jdbcType=VARCHAR}, 
+      #{jkpolenum,jdbcType=INTEGER}, #{dltype,jdbcType=VARCHAR}, #{dldesingntype,jdbcType=VARCHAR}, 
+      #{gllength,jdbcType=INTEGER}, #{gdevice,jdbcType=INTEGER}, #{wilelessnum,jdbcType=INTEGER}, 
+      #{dtunum,jdbcType=INTEGER}, #{ftunum,jdbcType=INTEGER}, #{twodesign,jdbcType=INTEGER}, 
+      #{type,jdbcType=VARCHAR}, #{expectresults,jdbcType=VARCHAR}, #{isTransferBb,jdbcType=VARCHAR}, 
+      #{projectCode,jdbcType=VARCHAR}, #{needRaiseUnit,jdbcType=VARCHAR}, #{primaryProjectName,jdbcType=VARCHAR}, 
+      #{isNeedRedlineReply,jdbcType=VARCHAR}, #{isProcedureReady,jdbcType=VARCHAR}, #{isImage,jdbcType=VARCHAR}, 
+      #{isClimaxProject,jdbcType=VARCHAR}, #{contactPerson,jdbcType=VARCHAR}, #{designCompany,jdbcType=VARCHAR}, 
+      #{projectManager,jdbcType=VARCHAR}, #{projectStateBb,jdbcType=VARCHAR}, #{grossInvestment,jdbcType=DOUBLE}, 
+      #{sqpstime,jdbcType=TIMESTAMP}, #{pstgtime,jdbcType=TIMESTAMP}, #{isArrangement,jdbcType=VARCHAR}, 
+      #{problemScore,jdbcType=DOUBLE}, #{jkxlDhxj,jdbcType=DOUBLE}, #{jkxlTgshuanghxj,jdbcType=DOUBLE}, 
+      #{jkxlTgsihxj,jdbcType=DOUBLE}, #{jkxlDhgz,jdbcType=DOUBLE}, #{jkxlTgshuanghgz,jdbcType=DOUBLE}, 
+      #{jkxlTgsihgz,jdbcType=DOUBLE}, #{jkxlGgg,jdbcType=DOUBLE}, #{dlJm400,jdbcType=DOUBLE}, 
+      #{dlJm240,jdbcType=DOUBLE}, #{dltd4k,jdbcType=DOUBLE}, #{dltd6k,jdbcType=DOUBLE}, 
+      #{dltd8k,jdbcType=DOUBLE}, #{dltd9k,jdbcType=DOUBLE}, #{dltd12k,jdbcType=DOUBLE}, 
+      #{dltd16k,jdbcType=DOUBLE}, #{dltd24k,jdbcType=DOUBLE}, #{dltdLg4k,jdbcType=DOUBLE}, 
+      #{dltdLg7k,jdbcType=DOUBLE}, #{dljZt,jdbcType=INTEGER}, #{dljZj,jdbcType=INTEGER}, 
+      #{dljSanj,jdbcType=INTEGER}, #{dljSij,jdbcType=INTEGER}, #{dyjkxlDhxj,jdbcType=DOUBLE}, 
+      #{dyjkxlTgshxj,jdbcType=DOUBLE}, #{dyjkxlDhgz,jdbcType=DOUBLE}, #{dyjkxlTgshgz,jdbcType=DOUBLE}, 
+      #{dydlJm240,jdbcType=DOUBLE}, #{dydlJm150,jdbcType=DOUBLE}, #{byqGsb200,jdbcType=INTEGER}, 
+      #{byqGsb400,jdbcType=INTEGER}, #{byqXb315,jdbcType=INTEGER}, #{byqXb500,jdbcType=INTEGER}, 
+      #{byqXb204,jdbcType=INTEGER}, #{byqPdf800,jdbcType=INTEGER}, #{byqPdf1000,jdbcType=INTEGER}, 
+      #{byqPdf1250,jdbcType=INTEGER}, #{hwhwg2j2c,jdbcType=INTEGER}, #{hwhwg2j4c,jdbcType=INTEGER}, 
+      #{zskgZdh,jdbcType=INTEGER}, #{hnkggZdh,jdbcType=INTEGER}, #{sqpstimeisupdate,jdbcType=INTEGER}, 
+      #{backstatus,jdbcType=VARCHAR}, #{backfee,jdbcType=DOUBLE}, #{ylxtime,jdbcType=TIMESTAMP}, 
+      #{equipmentSwitch,jdbcType=VARCHAR}, #{deletebyglgj,jdbcType=VARCHAR}, #{olddata,jdbcType=LONGVARCHAR}, 
+      #{nowdata,jdbcType=LONGVARCHAR}, #{problemstatus,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.glens.model.GPlanCbxmWithBLOBs">
+    insert into g_plan_cbxm
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="prjid != null">
+        PrjID,
+      </if>
+      <if test="ssdatetime != null">
+        SSDateTime,
+      </if>
+      <if test="parentprjid != null">
+        ParentPrjID,
+      </if>
+      <if test="prjtype != null">
+        PrjType,
+      </if>
+      <if test="prjbh != null">
+        PrjBH,
+      </if>
+      <if test="prjname != null">
+        PrjName,
+      </if>
+      <if test="prjlx != null">
+        PrjLX,
+      </if>
+      <if test="prjyear != null">
+        PrjYear,
+      </if>
+      <if test="jd != null">
+        JD,
+      </if>
+      <if test="prjxz != null">
+        PrjXZ,
+      </if>
+      <if test="buildreason != null">
+        BuildReason,
+      </if>
+      <if test="buildInfo != null">
+        Build_Info,
+      </if>
+      <if test="planregionname != null">
+        PlanRegionName,
+      </if>
+      <if test="planregioncode != null">
+        PlanRegionCode,
+      </if>
+      <if test="adddatetime != null">
+        AddDateTime,
+      </if>
+      <if test="addryjc != null">
+        AddRYJC,
+      </if>
+      <if test="bz != null">
+        BZ,
+      </if>
+      <if test="kgg != null">
+        KGG,
+      </if>
+      <if test="jkcd != null">
+        JKCD,
+      </if>
+      <if test="dlcd != null">
+        DLCD,
+      </if>
+      <if test="hwgnum != null">
+        HWGNum,
+      </if>
+      <if test="kgznum != null">
+        KGZNum,
+      </if>
+      <if test="fzxnum != null">
+        FZXNum,
+      </if>
+      <if test="zskgnum != null">
+        ZSKGNum,
+      </if>
+      <if test="pdsrl != null">
+        PDSRL,
+      </if>
+      <if test="pdsnum != null">
+        PDSNum,
+      </if>
+      <if test="xsbrl != null">
+        XSBRL,
+      </if>
+      <if test="xsbnum != null">
+        XSBNum,
+      </if>
+      <if test="byqrl != null">
+        BYQRL,
+      </if>
+      <if test="byqnum != null">
+        BYQNum,
+      </if>
+      <if test="dltdcd != null">
+        DLTDCD,
+      </if>
+      <if test="dyxlcd != null">
+        DYXLCD,
+      </if>
+      <if test="dydlcd != null">
+        DYDLCD,
+      </if>
+      <if test="dyfzxnum != null">
+        DYFZXNum,
+      </if>
+      <if test="dypdgnum != null">
+        DYPDGNum,
+      </if>
+      <if test="totalfee != null">
+        TotalFee,
+      </if>
+      <if test="zhpdx != null">
+        ZHPDX,
+      </if>
+      <if test="fhggnumdy != null">
+        FHGGNUMDY,
+      </if>
+      <if test="wgbcdy != null">
+        WGBCDY,
+      </if>
+      <if test="jxh != null">
+        JXH,
+      </if>
+      <if test="jhdlcddy != null">
+        JHDLCDDY,
+      </if>
+      <if test="status != null">
+        Status,
+      </if>
+      <if test="pgnr != null">
+        PGNR,
+      </if>
+      <if test="projectlocation != null">
+        ProjectLocation,
+      </if>
+      <if test="plnr != null">
+        PLNR,
+      </if>
+      <if test="dgnum != null">
+        DGNum,
+      </if>
+      <if test="gdsname != null">
+        GDSName,
+      </if>
+      <if test="prjlevel != null">
+        PrjLevel,
+      </if>
+      <if test="iscooroperative != null">
+        IsCooroperative,
+      </if>
+      <if test="jkdxtype != null">
+        JKDXTYPE,
+      </if>
+      <if test="jkpolenum != null">
+        JKPOLENUM,
+      </if>
+      <if test="dltype != null">
+        DLTYPE,
+      </if>
+      <if test="dldesingntype != null">
+        DLDESINGNTYPE,
+      </if>
+      <if test="gllength != null">
+        GLLENGTH,
+      </if>
+      <if test="gdevice != null">
+        GDEVICE,
+      </if>
+      <if test="wilelessnum != null">
+        WILELESSNUM,
+      </if>
+      <if test="dtunum != null">
+        DTUNUM,
+      </if>
+      <if test="ftunum != null">
+        FTUNUM,
+      </if>
+      <if test="twodesign != null">
+        TwoDESIGN,
+      </if>
+      <if test="type != null">
+        TYPE,
+      </if>
+      <if test="expectresults != null">
+        ExpectResults,
+      </if>
+      <if test="isTransferBb != null">
+        IS_TRANSFER_BB,
+      </if>
+      <if test="projectCode != null">
+        PROJECT_CODE,
+      </if>
+      <if test="needRaiseUnit != null">
+        NEED_RAISE_UNIT,
+      </if>
+      <if test="primaryProjectName != null">
+        PRIMARY_PROJECT_NAME,
+      </if>
+      <if test="isNeedRedlineReply != null">
+        IS_NEED_REDLINE_REPLY,
+      </if>
+      <if test="isProcedureReady != null">
+        IS_PROCEDURE_READY,
+      </if>
+      <if test="isImage != null">
+        IS_IMAGE,
+      </if>
+      <if test="isClimaxProject != null">
+        IS_CLIMAX_PROJECT,
+      </if>
+      <if test="contactPerson != null">
+        CONTACT_PERSON,
+      </if>
+      <if test="designCompany != null">
+        DESIGN_COMPANY,
+      </if>
+      <if test="projectManager != null">
+        PROJECT_MANAGER,
+      </if>
+      <if test="projectStateBb != null">
+        PROJECT_STATE_BB,
+      </if>
+      <if test="grossInvestment != null">
+        GROSS_INVESTMENT,
+      </if>
+      <if test="sqpstime != null">
+        SQPSTime,
+      </if>
+      <if test="pstgtime != null">
+        PSTGTime,
+      </if>
+      <if test="isArrangement != null">
+        IS_ARRANGEMENT,
+      </if>
+      <if test="problemScore != null">
+        PROBLEM_SCORE,
+      </if>
+      <if test="jkxlDhxj != null">
+        JKXL_DHXJ,
+      </if>
+      <if test="jkxlTgshuanghxj != null">
+        JKXL_TGSHUANGHXJ,
+      </if>
+      <if test="jkxlTgsihxj != null">
+        JKXL_TGSIHXJ,
+      </if>
+      <if test="jkxlDhgz != null">
+        JKXL_DHGZ,
+      </if>
+      <if test="jkxlTgshuanghgz != null">
+        JKXL_TGSHUANGHGZ,
+      </if>
+      <if test="jkxlTgsihgz != null">
+        JKXL_TGSIHGZ,
+      </if>
+      <if test="jkxlGgg != null">
+        JKXL_GGG,
+      </if>
+      <if test="dlJm400 != null">
+        DL_JM400,
+      </if>
+      <if test="dlJm240 != null">
+        DL_JM240,
+      </if>
+      <if test="dltd4k != null">
+        DLTD_4K,
+      </if>
+      <if test="dltd6k != null">
+        DLTD_6K,
+      </if>
+      <if test="dltd8k != null">
+        DLTD_8K,
+      </if>
+      <if test="dltd9k != null">
+        DLTD_9K,
+      </if>
+      <if test="dltd12k != null">
+        DLTD_12K,
+      </if>
+      <if test="dltd16k != null">
+        DLTD_16K,
+      </if>
+      <if test="dltd24k != null">
+        DLTD_24K,
+      </if>
+      <if test="dltdLg4k != null">
+        DLTD_LG4K,
+      </if>
+      <if test="dltdLg7k != null">
+        DLTD_LG7K,
+      </if>
+      <if test="dljZt != null">
+        DLJ_ZT,
+      </if>
+      <if test="dljZj != null">
+        DLJ_ZJ,
+      </if>
+      <if test="dljSanj != null">
+        DLJ_SANJ,
+      </if>
+      <if test="dljSij != null">
+        DLJ_SIJ,
+      </if>
+      <if test="dyjkxlDhxj != null">
+        DYJKXL_DHXJ,
+      </if>
+      <if test="dyjkxlTgshxj != null">
+        DYJKXL_TGSHXJ,
+      </if>
+      <if test="dyjkxlDhgz != null">
+        DYJKXL_DHGZ,
+      </if>
+      <if test="dyjkxlTgshgz != null">
+        DYJKXL_TGSHGZ,
+      </if>
+      <if test="dydlJm240 != null">
+        DYDL_JM240,
+      </if>
+      <if test="dydlJm150 != null">
+        DYDL_JM150,
+      </if>
+      <if test="byqGsb200 != null">
+        BYQ_GSB200,
+      </if>
+      <if test="byqGsb400 != null">
+        BYQ_GSB400,
+      </if>
+      <if test="byqXb315 != null">
+        BYQ_XB315,
+      </if>
+      <if test="byqXb500 != null">
+        BYQ_XB500,
+      </if>
+      <if test="byqXb204 != null">
+        BYQ_XB204,
+      </if>
+      <if test="byqPdf800 != null">
+        BYQ_PDF800,
+      </if>
+      <if test="byqPdf1000 != null">
+        BYQ_PDF1000,
+      </if>
+      <if test="byqPdf1250 != null">
+        BYQ_PDF1250,
+      </if>
+      <if test="hwhwg2j2c != null">
+        HWHWG_2J2C,
+      </if>
+      <if test="hwhwg2j4c != null">
+        HWHWG_2J4C,
+      </if>
+      <if test="zskgZdh != null">
+        ZSKG_ZDH,
+      </if>
+      <if test="hnkggZdh != null">
+        HNKGG_ZDH,
+      </if>
+      <if test="sqpstimeisupdate != null">
+        SQPSTimeIsUpdate,
+      </if>
+      <if test="backstatus != null">
+        BackStatus,
+      </if>
+      <if test="backfee != null">
+        BackFee,
+      </if>
+      <if test="ylxtime != null">
+        YLXTIME,
+      </if>
+      <if test="equipmentSwitch != null">
+        Equipment_Switch,
+      </if>
+      <if test="deletebyglgj != null">
+        DeleteByGLGJ,
+      </if>
+      <if test="olddata != null">
+        OldData,
+      </if>
+      <if test="nowdata != null">
+        NowData,
+      </if>
+      <if test="problemstatus != null">
+        ProblemStatus,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="prjid != null">
+        #{prjid,jdbcType=VARCHAR},
+      </if>
+      <if test="ssdatetime != null">
+        #{ssdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="parentprjid != null">
+        #{parentprjid,jdbcType=VARCHAR},
+      </if>
+      <if test="prjtype != null">
+        #{prjtype,jdbcType=VARCHAR},
+      </if>
+      <if test="prjbh != null">
+        #{prjbh,jdbcType=VARCHAR},
+      </if>
+      <if test="prjname != null">
+        #{prjname,jdbcType=VARCHAR},
+      </if>
+      <if test="prjlx != null">
+        #{prjlx,jdbcType=VARCHAR},
+      </if>
+      <if test="prjyear != null">
+        #{prjyear,jdbcType=VARCHAR},
+      </if>
+      <if test="jd != null">
+        #{jd,jdbcType=CHAR},
+      </if>
+      <if test="prjxz != null">
+        #{prjxz,jdbcType=CHAR},
+      </if>
+      <if test="buildreason != null">
+        #{buildreason,jdbcType=VARCHAR},
+      </if>
+      <if test="buildInfo != null">
+        #{buildInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="planregionname != null">
+        #{planregionname,jdbcType=VARCHAR},
+      </if>
+      <if test="planregioncode != null">
+        #{planregioncode,jdbcType=VARCHAR},
+      </if>
+      <if test="adddatetime != null">
+        #{adddatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addryjc != null">
+        #{addryjc,jdbcType=VARCHAR},
+      </if>
+      <if test="bz != null">
+        #{bz,jdbcType=VARCHAR},
+      </if>
+      <if test="kgg != null">
+        #{kgg,jdbcType=INTEGER},
+      </if>
+      <if test="jkcd != null">
+        #{jkcd,jdbcType=DOUBLE},
+      </if>
+      <if test="dlcd != null">
+        #{dlcd,jdbcType=DOUBLE},
+      </if>
+      <if test="hwgnum != null">
+        #{hwgnum,jdbcType=INTEGER},
+      </if>
+      <if test="kgznum != null">
+        #{kgznum,jdbcType=INTEGER},
+      </if>
+      <if test="fzxnum != null">
+        #{fzxnum,jdbcType=INTEGER},
+      </if>
+      <if test="zskgnum != null">
+        #{zskgnum,jdbcType=INTEGER},
+      </if>
+      <if test="pdsrl != null">
+        #{pdsrl,jdbcType=DOUBLE},
+      </if>
+      <if test="pdsnum != null">
+        #{pdsnum,jdbcType=INTEGER},
+      </if>
+      <if test="xsbrl != null">
+        #{xsbrl,jdbcType=DOUBLE},
+      </if>
+      <if test="xsbnum != null">
+        #{xsbnum,jdbcType=INTEGER},
+      </if>
+      <if test="byqrl != null">
+        #{byqrl,jdbcType=DOUBLE},
+      </if>
+      <if test="byqnum != null">
+        #{byqnum,jdbcType=INTEGER},
+      </if>
+      <if test="dltdcd != null">
+        #{dltdcd,jdbcType=DOUBLE},
+      </if>
+      <if test="dyxlcd != null">
+        #{dyxlcd,jdbcType=DOUBLE},
+      </if>
+      <if test="dydlcd != null">
+        #{dydlcd,jdbcType=DOUBLE},
+      </if>
+      <if test="dyfzxnum != null">
+        #{dyfzxnum,jdbcType=INTEGER},
+      </if>
+      <if test="dypdgnum != null">
+        #{dypdgnum,jdbcType=INTEGER},
+      </if>
+      <if test="totalfee != null">
+        #{totalfee,jdbcType=DOUBLE},
+      </if>
+      <if test="zhpdx != null">
+        #{zhpdx,jdbcType=INTEGER},
+      </if>
+      <if test="fhggnumdy != null">
+        #{fhggnumdy,jdbcType=INTEGER},
+      </if>
+      <if test="wgbcdy != null">
+        #{wgbcdy,jdbcType=INTEGER},
+      </if>
+      <if test="jxh != null">
+        #{jxh,jdbcType=DOUBLE},
+      </if>
+      <if test="jhdlcddy != null">
+        #{jhdlcddy,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="pgnr != null">
+        #{pgnr,jdbcType=VARCHAR},
+      </if>
+      <if test="projectlocation != null">
+        #{projectlocation,jdbcType=VARCHAR},
+      </if>
+      <if test="plnr != null">
+        #{plnr,jdbcType=VARCHAR},
+      </if>
+      <if test="dgnum != null">
+        #{dgnum,jdbcType=INTEGER},
+      </if>
+      <if test="gdsname != null">
+        #{gdsname,jdbcType=VARCHAR},
+      </if>
+      <if test="prjlevel != null">
+        #{prjlevel,jdbcType=VARCHAR},
+      </if>
+      <if test="iscooroperative != null">
+        #{iscooroperative,jdbcType=VARCHAR},
+      </if>
+      <if test="jkdxtype != null">
+        #{jkdxtype,jdbcType=VARCHAR},
+      </if>
+      <if test="jkpolenum != null">
+        #{jkpolenum,jdbcType=INTEGER},
+      </if>
+      <if test="dltype != null">
+        #{dltype,jdbcType=VARCHAR},
+      </if>
+      <if test="dldesingntype != null">
+        #{dldesingntype,jdbcType=VARCHAR},
+      </if>
+      <if test="gllength != null">
+        #{gllength,jdbcType=INTEGER},
+      </if>
+      <if test="gdevice != null">
+        #{gdevice,jdbcType=INTEGER},
+      </if>
+      <if test="wilelessnum != null">
+        #{wilelessnum,jdbcType=INTEGER},
+      </if>
+      <if test="dtunum != null">
+        #{dtunum,jdbcType=INTEGER},
+      </if>
+      <if test="ftunum != null">
+        #{ftunum,jdbcType=INTEGER},
+      </if>
+      <if test="twodesign != null">
+        #{twodesign,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="expectresults != null">
+        #{expectresults,jdbcType=VARCHAR},
+      </if>
+      <if test="isTransferBb != null">
+        #{isTransferBb,jdbcType=VARCHAR},
+      </if>
+      <if test="projectCode != null">
+        #{projectCode,jdbcType=VARCHAR},
+      </if>
+      <if test="needRaiseUnit != null">
+        #{needRaiseUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="primaryProjectName != null">
+        #{primaryProjectName,jdbcType=VARCHAR},
+      </if>
+      <if test="isNeedRedlineReply != null">
+        #{isNeedRedlineReply,jdbcType=VARCHAR},
+      </if>
+      <if test="isProcedureReady != null">
+        #{isProcedureReady,jdbcType=VARCHAR},
+      </if>
+      <if test="isImage != null">
+        #{isImage,jdbcType=VARCHAR},
+      </if>
+      <if test="isClimaxProject != null">
+        #{isClimaxProject,jdbcType=VARCHAR},
+      </if>
+      <if test="contactPerson != null">
+        #{contactPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="designCompany != null">
+        #{designCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="projectManager != null">
+        #{projectManager,jdbcType=VARCHAR},
+      </if>
+      <if test="projectStateBb != null">
+        #{projectStateBb,jdbcType=VARCHAR},
+      </if>
+      <if test="grossInvestment != null">
+        #{grossInvestment,jdbcType=DOUBLE},
+      </if>
+      <if test="sqpstime != null">
+        #{sqpstime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="pstgtime != null">
+        #{pstgtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isArrangement != null">
+        #{isArrangement,jdbcType=VARCHAR},
+      </if>
+      <if test="problemScore != null">
+        #{problemScore,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlDhxj != null">
+        #{jkxlDhxj,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlTgshuanghxj != null">
+        #{jkxlTgshuanghxj,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlTgsihxj != null">
+        #{jkxlTgsihxj,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlDhgz != null">
+        #{jkxlDhgz,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlTgshuanghgz != null">
+        #{jkxlTgshuanghgz,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlTgsihgz != null">
+        #{jkxlTgsihgz,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlGgg != null">
+        #{jkxlGgg,jdbcType=DOUBLE},
+      </if>
+      <if test="dlJm400 != null">
+        #{dlJm400,jdbcType=DOUBLE},
+      </if>
+      <if test="dlJm240 != null">
+        #{dlJm240,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd4k != null">
+        #{dltd4k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd6k != null">
+        #{dltd6k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd8k != null">
+        #{dltd8k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd9k != null">
+        #{dltd9k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd12k != null">
+        #{dltd12k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd16k != null">
+        #{dltd16k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd24k != null">
+        #{dltd24k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltdLg4k != null">
+        #{dltdLg4k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltdLg7k != null">
+        #{dltdLg7k,jdbcType=DOUBLE},
+      </if>
+      <if test="dljZt != null">
+        #{dljZt,jdbcType=INTEGER},
+      </if>
+      <if test="dljZj != null">
+        #{dljZj,jdbcType=INTEGER},
+      </if>
+      <if test="dljSanj != null">
+        #{dljSanj,jdbcType=INTEGER},
+      </if>
+      <if test="dljSij != null">
+        #{dljSij,jdbcType=INTEGER},
+      </if>
+      <if test="dyjkxlDhxj != null">
+        #{dyjkxlDhxj,jdbcType=DOUBLE},
+      </if>
+      <if test="dyjkxlTgshxj != null">
+        #{dyjkxlTgshxj,jdbcType=DOUBLE},
+      </if>
+      <if test="dyjkxlDhgz != null">
+        #{dyjkxlDhgz,jdbcType=DOUBLE},
+      </if>
+      <if test="dyjkxlTgshgz != null">
+        #{dyjkxlTgshgz,jdbcType=DOUBLE},
+      </if>
+      <if test="dydlJm240 != null">
+        #{dydlJm240,jdbcType=DOUBLE},
+      </if>
+      <if test="dydlJm150 != null">
+        #{dydlJm150,jdbcType=DOUBLE},
+      </if>
+      <if test="byqGsb200 != null">
+        #{byqGsb200,jdbcType=INTEGER},
+      </if>
+      <if test="byqGsb400 != null">
+        #{byqGsb400,jdbcType=INTEGER},
+      </if>
+      <if test="byqXb315 != null">
+        #{byqXb315,jdbcType=INTEGER},
+      </if>
+      <if test="byqXb500 != null">
+        #{byqXb500,jdbcType=INTEGER},
+      </if>
+      <if test="byqXb204 != null">
+        #{byqXb204,jdbcType=INTEGER},
+      </if>
+      <if test="byqPdf800 != null">
+        #{byqPdf800,jdbcType=INTEGER},
+      </if>
+      <if test="byqPdf1000 != null">
+        #{byqPdf1000,jdbcType=INTEGER},
+      </if>
+      <if test="byqPdf1250 != null">
+        #{byqPdf1250,jdbcType=INTEGER},
+      </if>
+      <if test="hwhwg2j2c != null">
+        #{hwhwg2j2c,jdbcType=INTEGER},
+      </if>
+      <if test="hwhwg2j4c != null">
+        #{hwhwg2j4c,jdbcType=INTEGER},
+      </if>
+      <if test="zskgZdh != null">
+        #{zskgZdh,jdbcType=INTEGER},
+      </if>
+      <if test="hnkggZdh != null">
+        #{hnkggZdh,jdbcType=INTEGER},
+      </if>
+      <if test="sqpstimeisupdate != null">
+        #{sqpstimeisupdate,jdbcType=INTEGER},
+      </if>
+      <if test="backstatus != null">
+        #{backstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="backfee != null">
+        #{backfee,jdbcType=DOUBLE},
+      </if>
+      <if test="ylxtime != null">
+        #{ylxtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="equipmentSwitch != null">
+        #{equipmentSwitch,jdbcType=VARCHAR},
+      </if>
+      <if test="deletebyglgj != null">
+        #{deletebyglgj,jdbcType=VARCHAR},
+      </if>
+      <if test="olddata != null">
+        #{olddata,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="nowdata != null">
+        #{nowdata,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="problemstatus != null">
+        #{problemstatus,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.glens.model.GPlanCbxmWithBLOBs">
+    update g_plan_cbxm
+    <set>
+      <if test="ssdatetime != null">
+        SSDateTime = #{ssdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="parentprjid != null">
+        ParentPrjID = #{parentprjid,jdbcType=VARCHAR},
+      </if>
+      <if test="prjtype != null">
+        PrjType = #{prjtype,jdbcType=VARCHAR},
+      </if>
+      <if test="prjbh != null">
+        PrjBH = #{prjbh,jdbcType=VARCHAR},
+      </if>
+      <if test="prjname != null">
+        PrjName = #{prjname,jdbcType=VARCHAR},
+      </if>
+      <if test="prjlx != null">
+        PrjLX = #{prjlx,jdbcType=VARCHAR},
+      </if>
+      <if test="prjyear != null">
+        PrjYear = #{prjyear,jdbcType=VARCHAR},
+      </if>
+      <if test="jd != null">
+        JD = #{jd,jdbcType=CHAR},
+      </if>
+      <if test="prjxz != null">
+        PrjXZ = #{prjxz,jdbcType=CHAR},
+      </if>
+      <if test="buildreason != null">
+        BuildReason = #{buildreason,jdbcType=VARCHAR},
+      </if>
+      <if test="buildInfo != null">
+        Build_Info = #{buildInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="planregionname != null">
+        PlanRegionName = #{planregionname,jdbcType=VARCHAR},
+      </if>
+      <if test="planregioncode != null">
+        PlanRegionCode = #{planregioncode,jdbcType=VARCHAR},
+      </if>
+      <if test="adddatetime != null">
+        AddDateTime = #{adddatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addryjc != null">
+        AddRYJC = #{addryjc,jdbcType=VARCHAR},
+      </if>
+      <if test="bz != null">
+        BZ = #{bz,jdbcType=VARCHAR},
+      </if>
+      <if test="kgg != null">
+        KGG = #{kgg,jdbcType=INTEGER},
+      </if>
+      <if test="jkcd != null">
+        JKCD = #{jkcd,jdbcType=DOUBLE},
+      </if>
+      <if test="dlcd != null">
+        DLCD = #{dlcd,jdbcType=DOUBLE},
+      </if>
+      <if test="hwgnum != null">
+        HWGNum = #{hwgnum,jdbcType=INTEGER},
+      </if>
+      <if test="kgznum != null">
+        KGZNum = #{kgznum,jdbcType=INTEGER},
+      </if>
+      <if test="fzxnum != null">
+        FZXNum = #{fzxnum,jdbcType=INTEGER},
+      </if>
+      <if test="zskgnum != null">
+        ZSKGNum = #{zskgnum,jdbcType=INTEGER},
+      </if>
+      <if test="pdsrl != null">
+        PDSRL = #{pdsrl,jdbcType=DOUBLE},
+      </if>
+      <if test="pdsnum != null">
+        PDSNum = #{pdsnum,jdbcType=INTEGER},
+      </if>
+      <if test="xsbrl != null">
+        XSBRL = #{xsbrl,jdbcType=DOUBLE},
+      </if>
+      <if test="xsbnum != null">
+        XSBNum = #{xsbnum,jdbcType=INTEGER},
+      </if>
+      <if test="byqrl != null">
+        BYQRL = #{byqrl,jdbcType=DOUBLE},
+      </if>
+      <if test="byqnum != null">
+        BYQNum = #{byqnum,jdbcType=INTEGER},
+      </if>
+      <if test="dltdcd != null">
+        DLTDCD = #{dltdcd,jdbcType=DOUBLE},
+      </if>
+      <if test="dyxlcd != null">
+        DYXLCD = #{dyxlcd,jdbcType=DOUBLE},
+      </if>
+      <if test="dydlcd != null">
+        DYDLCD = #{dydlcd,jdbcType=DOUBLE},
+      </if>
+      <if test="dyfzxnum != null">
+        DYFZXNum = #{dyfzxnum,jdbcType=INTEGER},
+      </if>
+      <if test="dypdgnum != null">
+        DYPDGNum = #{dypdgnum,jdbcType=INTEGER},
+      </if>
+      <if test="totalfee != null">
+        TotalFee = #{totalfee,jdbcType=DOUBLE},
+      </if>
+      <if test="zhpdx != null">
+        ZHPDX = #{zhpdx,jdbcType=INTEGER},
+      </if>
+      <if test="fhggnumdy != null">
+        FHGGNUMDY = #{fhggnumdy,jdbcType=INTEGER},
+      </if>
+      <if test="wgbcdy != null">
+        WGBCDY = #{wgbcdy,jdbcType=INTEGER},
+      </if>
+      <if test="jxh != null">
+        JXH = #{jxh,jdbcType=DOUBLE},
+      </if>
+      <if test="jhdlcddy != null">
+        JHDLCDDY = #{jhdlcddy,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null">
+        Status = #{status,jdbcType=CHAR},
+      </if>
+      <if test="pgnr != null">
+        PGNR = #{pgnr,jdbcType=VARCHAR},
+      </if>
+      <if test="projectlocation != null">
+        ProjectLocation = #{projectlocation,jdbcType=VARCHAR},
+      </if>
+      <if test="plnr != null">
+        PLNR = #{plnr,jdbcType=VARCHAR},
+      </if>
+      <if test="dgnum != null">
+        DGNum = #{dgnum,jdbcType=INTEGER},
+      </if>
+      <if test="gdsname != null">
+        GDSName = #{gdsname,jdbcType=VARCHAR},
+      </if>
+      <if test="prjlevel != null">
+        PrjLevel = #{prjlevel,jdbcType=VARCHAR},
+      </if>
+      <if test="iscooroperative != null">
+        IsCooroperative = #{iscooroperative,jdbcType=VARCHAR},
+      </if>
+      <if test="jkdxtype != null">
+        JKDXTYPE = #{jkdxtype,jdbcType=VARCHAR},
+      </if>
+      <if test="jkpolenum != null">
+        JKPOLENUM = #{jkpolenum,jdbcType=INTEGER},
+      </if>
+      <if test="dltype != null">
+        DLTYPE = #{dltype,jdbcType=VARCHAR},
+      </if>
+      <if test="dldesingntype != null">
+        DLDESINGNTYPE = #{dldesingntype,jdbcType=VARCHAR},
+      </if>
+      <if test="gllength != null">
+        GLLENGTH = #{gllength,jdbcType=INTEGER},
+      </if>
+      <if test="gdevice != null">
+        GDEVICE = #{gdevice,jdbcType=INTEGER},
+      </if>
+      <if test="wilelessnum != null">
+        WILELESSNUM = #{wilelessnum,jdbcType=INTEGER},
+      </if>
+      <if test="dtunum != null">
+        DTUNUM = #{dtunum,jdbcType=INTEGER},
+      </if>
+      <if test="ftunum != null">
+        FTUNUM = #{ftunum,jdbcType=INTEGER},
+      </if>
+      <if test="twodesign != null">
+        TwoDESIGN = #{twodesign,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        TYPE = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="expectresults != null">
+        ExpectResults = #{expectresults,jdbcType=VARCHAR},
+      </if>
+      <if test="isTransferBb != null">
+        IS_TRANSFER_BB = #{isTransferBb,jdbcType=VARCHAR},
+      </if>
+      <if test="projectCode != null">
+        PROJECT_CODE = #{projectCode,jdbcType=VARCHAR},
+      </if>
+      <if test="needRaiseUnit != null">
+        NEED_RAISE_UNIT = #{needRaiseUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="primaryProjectName != null">
+        PRIMARY_PROJECT_NAME = #{primaryProjectName,jdbcType=VARCHAR},
+      </if>
+      <if test="isNeedRedlineReply != null">
+        IS_NEED_REDLINE_REPLY = #{isNeedRedlineReply,jdbcType=VARCHAR},
+      </if>
+      <if test="isProcedureReady != null">
+        IS_PROCEDURE_READY = #{isProcedureReady,jdbcType=VARCHAR},
+      </if>
+      <if test="isImage != null">
+        IS_IMAGE = #{isImage,jdbcType=VARCHAR},
+      </if>
+      <if test="isClimaxProject != null">
+        IS_CLIMAX_PROJECT = #{isClimaxProject,jdbcType=VARCHAR},
+      </if>
+      <if test="contactPerson != null">
+        CONTACT_PERSON = #{contactPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="designCompany != null">
+        DESIGN_COMPANY = #{designCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="projectManager != null">
+        PROJECT_MANAGER = #{projectManager,jdbcType=VARCHAR},
+      </if>
+      <if test="projectStateBb != null">
+        PROJECT_STATE_BB = #{projectStateBb,jdbcType=VARCHAR},
+      </if>
+      <if test="grossInvestment != null">
+        GROSS_INVESTMENT = #{grossInvestment,jdbcType=DOUBLE},
+      </if>
+      <if test="sqpstime != null">
+        SQPSTime = #{sqpstime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="pstgtime != null">
+        PSTGTime = #{pstgtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isArrangement != null">
+        IS_ARRANGEMENT = #{isArrangement,jdbcType=VARCHAR},
+      </if>
+      <if test="problemScore != null">
+        PROBLEM_SCORE = #{problemScore,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlDhxj != null">
+        JKXL_DHXJ = #{jkxlDhxj,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlTgshuanghxj != null">
+        JKXL_TGSHUANGHXJ = #{jkxlTgshuanghxj,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlTgsihxj != null">
+        JKXL_TGSIHXJ = #{jkxlTgsihxj,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlDhgz != null">
+        JKXL_DHGZ = #{jkxlDhgz,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlTgshuanghgz != null">
+        JKXL_TGSHUANGHGZ = #{jkxlTgshuanghgz,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlTgsihgz != null">
+        JKXL_TGSIHGZ = #{jkxlTgsihgz,jdbcType=DOUBLE},
+      </if>
+      <if test="jkxlGgg != null">
+        JKXL_GGG = #{jkxlGgg,jdbcType=DOUBLE},
+      </if>
+      <if test="dlJm400 != null">
+        DL_JM400 = #{dlJm400,jdbcType=DOUBLE},
+      </if>
+      <if test="dlJm240 != null">
+        DL_JM240 = #{dlJm240,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd4k != null">
+        DLTD_4K = #{dltd4k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd6k != null">
+        DLTD_6K = #{dltd6k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd8k != null">
+        DLTD_8K = #{dltd8k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd9k != null">
+        DLTD_9K = #{dltd9k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd12k != null">
+        DLTD_12K = #{dltd12k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd16k != null">
+        DLTD_16K = #{dltd16k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltd24k != null">
+        DLTD_24K = #{dltd24k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltdLg4k != null">
+        DLTD_LG4K = #{dltdLg4k,jdbcType=DOUBLE},
+      </if>
+      <if test="dltdLg7k != null">
+        DLTD_LG7K = #{dltdLg7k,jdbcType=DOUBLE},
+      </if>
+      <if test="dljZt != null">
+        DLJ_ZT = #{dljZt,jdbcType=INTEGER},
+      </if>
+      <if test="dljZj != null">
+        DLJ_ZJ = #{dljZj,jdbcType=INTEGER},
+      </if>
+      <if test="dljSanj != null">
+        DLJ_SANJ = #{dljSanj,jdbcType=INTEGER},
+      </if>
+      <if test="dljSij != null">
+        DLJ_SIJ = #{dljSij,jdbcType=INTEGER},
+      </if>
+      <if test="dyjkxlDhxj != null">
+        DYJKXL_DHXJ = #{dyjkxlDhxj,jdbcType=DOUBLE},
+      </if>
+      <if test="dyjkxlTgshxj != null">
+        DYJKXL_TGSHXJ = #{dyjkxlTgshxj,jdbcType=DOUBLE},
+      </if>
+      <if test="dyjkxlDhgz != null">
+        DYJKXL_DHGZ = #{dyjkxlDhgz,jdbcType=DOUBLE},
+      </if>
+      <if test="dyjkxlTgshgz != null">
+        DYJKXL_TGSHGZ = #{dyjkxlTgshgz,jdbcType=DOUBLE},
+      </if>
+      <if test="dydlJm240 != null">
+        DYDL_JM240 = #{dydlJm240,jdbcType=DOUBLE},
+      </if>
+      <if test="dydlJm150 != null">
+        DYDL_JM150 = #{dydlJm150,jdbcType=DOUBLE},
+      </if>
+      <if test="byqGsb200 != null">
+        BYQ_GSB200 = #{byqGsb200,jdbcType=INTEGER},
+      </if>
+      <if test="byqGsb400 != null">
+        BYQ_GSB400 = #{byqGsb400,jdbcType=INTEGER},
+      </if>
+      <if test="byqXb315 != null">
+        BYQ_XB315 = #{byqXb315,jdbcType=INTEGER},
+      </if>
+      <if test="byqXb500 != null">
+        BYQ_XB500 = #{byqXb500,jdbcType=INTEGER},
+      </if>
+      <if test="byqXb204 != null">
+        BYQ_XB204 = #{byqXb204,jdbcType=INTEGER},
+      </if>
+      <if test="byqPdf800 != null">
+        BYQ_PDF800 = #{byqPdf800,jdbcType=INTEGER},
+      </if>
+      <if test="byqPdf1000 != null">
+        BYQ_PDF1000 = #{byqPdf1000,jdbcType=INTEGER},
+      </if>
+      <if test="byqPdf1250 != null">
+        BYQ_PDF1250 = #{byqPdf1250,jdbcType=INTEGER},
+      </if>
+      <if test="hwhwg2j2c != null">
+        HWHWG_2J2C = #{hwhwg2j2c,jdbcType=INTEGER},
+      </if>
+      <if test="hwhwg2j4c != null">
+        HWHWG_2J4C = #{hwhwg2j4c,jdbcType=INTEGER},
+      </if>
+      <if test="zskgZdh != null">
+        ZSKG_ZDH = #{zskgZdh,jdbcType=INTEGER},
+      </if>
+      <if test="hnkggZdh != null">
+        HNKGG_ZDH = #{hnkggZdh,jdbcType=INTEGER},
+      </if>
+      <if test="sqpstimeisupdate != null">
+        SQPSTimeIsUpdate = #{sqpstimeisupdate,jdbcType=INTEGER},
+      </if>
+      <if test="backstatus != null">
+        BackStatus = #{backstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="backfee != null">
+        BackFee = #{backfee,jdbcType=DOUBLE},
+      </if>
+      <if test="ylxtime != null">
+        YLXTIME = #{ylxtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="equipmentSwitch != null">
+        Equipment_Switch = #{equipmentSwitch,jdbcType=VARCHAR},
+      </if>
+      <if test="deletebyglgj != null">
+        DeleteByGLGJ = #{deletebyglgj,jdbcType=VARCHAR},
+      </if>
+      <if test="olddata != null">
+        OldData = #{olddata,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="nowdata != null">
+        NowData = #{nowdata,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="problemstatus != null">
+        ProblemStatus = #{problemstatus,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where PrjID = #{prjid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.glens.model.GPlanCbxmWithBLOBs">
+    update g_plan_cbxm
+    set SSDateTime = #{ssdatetime,jdbcType=TIMESTAMP},
+      ParentPrjID = #{parentprjid,jdbcType=VARCHAR},
+      PrjType = #{prjtype,jdbcType=VARCHAR},
+      PrjBH = #{prjbh,jdbcType=VARCHAR},
+      PrjName = #{prjname,jdbcType=VARCHAR},
+      PrjLX = #{prjlx,jdbcType=VARCHAR},
+      PrjYear = #{prjyear,jdbcType=VARCHAR},
+      JD = #{jd,jdbcType=CHAR},
+      PrjXZ = #{prjxz,jdbcType=CHAR},
+      BuildReason = #{buildreason,jdbcType=VARCHAR},
+      Build_Info = #{buildInfo,jdbcType=VARCHAR},
+      PlanRegionName = #{planregionname,jdbcType=VARCHAR},
+      PlanRegionCode = #{planregioncode,jdbcType=VARCHAR},
+      AddDateTime = #{adddatetime,jdbcType=TIMESTAMP},
+      AddRYJC = #{addryjc,jdbcType=VARCHAR},
+      BZ = #{bz,jdbcType=VARCHAR},
+      KGG = #{kgg,jdbcType=INTEGER},
+      JKCD = #{jkcd,jdbcType=DOUBLE},
+      DLCD = #{dlcd,jdbcType=DOUBLE},
+      HWGNum = #{hwgnum,jdbcType=INTEGER},
+      KGZNum = #{kgznum,jdbcType=INTEGER},
+      FZXNum = #{fzxnum,jdbcType=INTEGER},
+      ZSKGNum = #{zskgnum,jdbcType=INTEGER},
+      PDSRL = #{pdsrl,jdbcType=DOUBLE},
+      PDSNum = #{pdsnum,jdbcType=INTEGER},
+      XSBRL = #{xsbrl,jdbcType=DOUBLE},
+      XSBNum = #{xsbnum,jdbcType=INTEGER},
+      BYQRL = #{byqrl,jdbcType=DOUBLE},
+      BYQNum = #{byqnum,jdbcType=INTEGER},
+      DLTDCD = #{dltdcd,jdbcType=DOUBLE},
+      DYXLCD = #{dyxlcd,jdbcType=DOUBLE},
+      DYDLCD = #{dydlcd,jdbcType=DOUBLE},
+      DYFZXNum = #{dyfzxnum,jdbcType=INTEGER},
+      DYPDGNum = #{dypdgnum,jdbcType=INTEGER},
+      TotalFee = #{totalfee,jdbcType=DOUBLE},
+      ZHPDX = #{zhpdx,jdbcType=INTEGER},
+      FHGGNUMDY = #{fhggnumdy,jdbcType=INTEGER},
+      WGBCDY = #{wgbcdy,jdbcType=INTEGER},
+      JXH = #{jxh,jdbcType=DOUBLE},
+      JHDLCDDY = #{jhdlcddy,jdbcType=DOUBLE},
+      Status = #{status,jdbcType=CHAR},
+      PGNR = #{pgnr,jdbcType=VARCHAR},
+      ProjectLocation = #{projectlocation,jdbcType=VARCHAR},
+      PLNR = #{plnr,jdbcType=VARCHAR},
+      DGNum = #{dgnum,jdbcType=INTEGER},
+      GDSName = #{gdsname,jdbcType=VARCHAR},
+      PrjLevel = #{prjlevel,jdbcType=VARCHAR},
+      IsCooroperative = #{iscooroperative,jdbcType=VARCHAR},
+      JKDXTYPE = #{jkdxtype,jdbcType=VARCHAR},
+      JKPOLENUM = #{jkpolenum,jdbcType=INTEGER},
+      DLTYPE = #{dltype,jdbcType=VARCHAR},
+      DLDESINGNTYPE = #{dldesingntype,jdbcType=VARCHAR},
+      GLLENGTH = #{gllength,jdbcType=INTEGER},
+      GDEVICE = #{gdevice,jdbcType=INTEGER},
+      WILELESSNUM = #{wilelessnum,jdbcType=INTEGER},
+      DTUNUM = #{dtunum,jdbcType=INTEGER},
+      FTUNUM = #{ftunum,jdbcType=INTEGER},
+      TwoDESIGN = #{twodesign,jdbcType=INTEGER},
+      TYPE = #{type,jdbcType=VARCHAR},
+      ExpectResults = #{expectresults,jdbcType=VARCHAR},
+      IS_TRANSFER_BB = #{isTransferBb,jdbcType=VARCHAR},
+      PROJECT_CODE = #{projectCode,jdbcType=VARCHAR},
+      NEED_RAISE_UNIT = #{needRaiseUnit,jdbcType=VARCHAR},
+      PRIMARY_PROJECT_NAME = #{primaryProjectName,jdbcType=VARCHAR},
+      IS_NEED_REDLINE_REPLY = #{isNeedRedlineReply,jdbcType=VARCHAR},
+      IS_PROCEDURE_READY = #{isProcedureReady,jdbcType=VARCHAR},
+      IS_IMAGE = #{isImage,jdbcType=VARCHAR},
+      IS_CLIMAX_PROJECT = #{isClimaxProject,jdbcType=VARCHAR},
+      CONTACT_PERSON = #{contactPerson,jdbcType=VARCHAR},
+      DESIGN_COMPANY = #{designCompany,jdbcType=VARCHAR},
+      PROJECT_MANAGER = #{projectManager,jdbcType=VARCHAR},
+      PROJECT_STATE_BB = #{projectStateBb,jdbcType=VARCHAR},
+      GROSS_INVESTMENT = #{grossInvestment,jdbcType=DOUBLE},
+      SQPSTime = #{sqpstime,jdbcType=TIMESTAMP},
+      PSTGTime = #{pstgtime,jdbcType=TIMESTAMP},
+      IS_ARRANGEMENT = #{isArrangement,jdbcType=VARCHAR},
+      PROBLEM_SCORE = #{problemScore,jdbcType=DOUBLE},
+      JKXL_DHXJ = #{jkxlDhxj,jdbcType=DOUBLE},
+      JKXL_TGSHUANGHXJ = #{jkxlTgshuanghxj,jdbcType=DOUBLE},
+      JKXL_TGSIHXJ = #{jkxlTgsihxj,jdbcType=DOUBLE},
+      JKXL_DHGZ = #{jkxlDhgz,jdbcType=DOUBLE},
+      JKXL_TGSHUANGHGZ = #{jkxlTgshuanghgz,jdbcType=DOUBLE},
+      JKXL_TGSIHGZ = #{jkxlTgsihgz,jdbcType=DOUBLE},
+      JKXL_GGG = #{jkxlGgg,jdbcType=DOUBLE},
+      DL_JM400 = #{dlJm400,jdbcType=DOUBLE},
+      DL_JM240 = #{dlJm240,jdbcType=DOUBLE},
+      DLTD_4K = #{dltd4k,jdbcType=DOUBLE},
+      DLTD_6K = #{dltd6k,jdbcType=DOUBLE},
+      DLTD_8K = #{dltd8k,jdbcType=DOUBLE},
+      DLTD_9K = #{dltd9k,jdbcType=DOUBLE},
+      DLTD_12K = #{dltd12k,jdbcType=DOUBLE},
+      DLTD_16K = #{dltd16k,jdbcType=DOUBLE},
+      DLTD_24K = #{dltd24k,jdbcType=DOUBLE},
+      DLTD_LG4K = #{dltdLg4k,jdbcType=DOUBLE},
+      DLTD_LG7K = #{dltdLg7k,jdbcType=DOUBLE},
+      DLJ_ZT = #{dljZt,jdbcType=INTEGER},
+      DLJ_ZJ = #{dljZj,jdbcType=INTEGER},
+      DLJ_SANJ = #{dljSanj,jdbcType=INTEGER},
+      DLJ_SIJ = #{dljSij,jdbcType=INTEGER},
+      DYJKXL_DHXJ = #{dyjkxlDhxj,jdbcType=DOUBLE},
+      DYJKXL_TGSHXJ = #{dyjkxlTgshxj,jdbcType=DOUBLE},
+      DYJKXL_DHGZ = #{dyjkxlDhgz,jdbcType=DOUBLE},
+      DYJKXL_TGSHGZ = #{dyjkxlTgshgz,jdbcType=DOUBLE},
+      DYDL_JM240 = #{dydlJm240,jdbcType=DOUBLE},
+      DYDL_JM150 = #{dydlJm150,jdbcType=DOUBLE},
+      BYQ_GSB200 = #{byqGsb200,jdbcType=INTEGER},
+      BYQ_GSB400 = #{byqGsb400,jdbcType=INTEGER},
+      BYQ_XB315 = #{byqXb315,jdbcType=INTEGER},
+      BYQ_XB500 = #{byqXb500,jdbcType=INTEGER},
+      BYQ_XB204 = #{byqXb204,jdbcType=INTEGER},
+      BYQ_PDF800 = #{byqPdf800,jdbcType=INTEGER},
+      BYQ_PDF1000 = #{byqPdf1000,jdbcType=INTEGER},
+      BYQ_PDF1250 = #{byqPdf1250,jdbcType=INTEGER},
+      HWHWG_2J2C = #{hwhwg2j2c,jdbcType=INTEGER},
+      HWHWG_2J4C = #{hwhwg2j4c,jdbcType=INTEGER},
+      ZSKG_ZDH = #{zskgZdh,jdbcType=INTEGER},
+      HNKGG_ZDH = #{hnkggZdh,jdbcType=INTEGER},
+      SQPSTimeIsUpdate = #{sqpstimeisupdate,jdbcType=INTEGER},
+      BackStatus = #{backstatus,jdbcType=VARCHAR},
+      BackFee = #{backfee,jdbcType=DOUBLE},
+      YLXTIME = #{ylxtime,jdbcType=TIMESTAMP},
+      Equipment_Switch = #{equipmentSwitch,jdbcType=VARCHAR},
+      DeleteByGLGJ = #{deletebyglgj,jdbcType=VARCHAR},
+      OldData = #{olddata,jdbcType=LONGVARCHAR},
+      NowData = #{nowdata,jdbcType=LONGVARCHAR},
+      ProblemStatus = #{problemstatus,jdbcType=LONGVARCHAR}
+    where PrjID = #{prjid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.glens.model.GPlanCbxm">
+    update g_plan_cbxm
+    set SSDateTime = #{ssdatetime,jdbcType=TIMESTAMP},
+      ParentPrjID = #{parentprjid,jdbcType=VARCHAR},
+      PrjType = #{prjtype,jdbcType=VARCHAR},
+      PrjBH = #{prjbh,jdbcType=VARCHAR},
+      PrjName = #{prjname,jdbcType=VARCHAR},
+      PrjLX = #{prjlx,jdbcType=VARCHAR},
+      PrjYear = #{prjyear,jdbcType=VARCHAR},
+      JD = #{jd,jdbcType=CHAR},
+      PrjXZ = #{prjxz,jdbcType=CHAR},
+      BuildReason = #{buildreason,jdbcType=VARCHAR},
+      Build_Info = #{buildInfo,jdbcType=VARCHAR},
+      PlanRegionName = #{planregionname,jdbcType=VARCHAR},
+      PlanRegionCode = #{planregioncode,jdbcType=VARCHAR},
+      AddDateTime = #{adddatetime,jdbcType=TIMESTAMP},
+      AddRYJC = #{addryjc,jdbcType=VARCHAR},
+      BZ = #{bz,jdbcType=VARCHAR},
+      KGG = #{kgg,jdbcType=INTEGER},
+      JKCD = #{jkcd,jdbcType=DOUBLE},
+      DLCD = #{dlcd,jdbcType=DOUBLE},
+      HWGNum = #{hwgnum,jdbcType=INTEGER},
+      KGZNum = #{kgznum,jdbcType=INTEGER},
+      FZXNum = #{fzxnum,jdbcType=INTEGER},
+      ZSKGNum = #{zskgnum,jdbcType=INTEGER},
+      PDSRL = #{pdsrl,jdbcType=DOUBLE},
+      PDSNum = #{pdsnum,jdbcType=INTEGER},
+      XSBRL = #{xsbrl,jdbcType=DOUBLE},
+      XSBNum = #{xsbnum,jdbcType=INTEGER},
+      BYQRL = #{byqrl,jdbcType=DOUBLE},
+      BYQNum = #{byqnum,jdbcType=INTEGER},
+      DLTDCD = #{dltdcd,jdbcType=DOUBLE},
+      DYXLCD = #{dyxlcd,jdbcType=DOUBLE},
+      DYDLCD = #{dydlcd,jdbcType=DOUBLE},
+      DYFZXNum = #{dyfzxnum,jdbcType=INTEGER},
+      DYPDGNum = #{dypdgnum,jdbcType=INTEGER},
+      TotalFee = #{totalfee,jdbcType=DOUBLE},
+      ZHPDX = #{zhpdx,jdbcType=INTEGER},
+      FHGGNUMDY = #{fhggnumdy,jdbcType=INTEGER},
+      WGBCDY = #{wgbcdy,jdbcType=INTEGER},
+      JXH = #{jxh,jdbcType=DOUBLE},
+      JHDLCDDY = #{jhdlcddy,jdbcType=DOUBLE},
+      Status = #{status,jdbcType=CHAR},
+      PGNR = #{pgnr,jdbcType=VARCHAR},
+      ProjectLocation = #{projectlocation,jdbcType=VARCHAR},
+      PLNR = #{plnr,jdbcType=VARCHAR},
+      DGNum = #{dgnum,jdbcType=INTEGER},
+      GDSName = #{gdsname,jdbcType=VARCHAR},
+      PrjLevel = #{prjlevel,jdbcType=VARCHAR},
+      IsCooroperative = #{iscooroperative,jdbcType=VARCHAR},
+      JKDXTYPE = #{jkdxtype,jdbcType=VARCHAR},
+      JKPOLENUM = #{jkpolenum,jdbcType=INTEGER},
+      DLTYPE = #{dltype,jdbcType=VARCHAR},
+      DLDESINGNTYPE = #{dldesingntype,jdbcType=VARCHAR},
+      GLLENGTH = #{gllength,jdbcType=INTEGER},
+      GDEVICE = #{gdevice,jdbcType=INTEGER},
+      WILELESSNUM = #{wilelessnum,jdbcType=INTEGER},
+      DTUNUM = #{dtunum,jdbcType=INTEGER},
+      FTUNUM = #{ftunum,jdbcType=INTEGER},
+      TwoDESIGN = #{twodesign,jdbcType=INTEGER},
+      TYPE = #{type,jdbcType=VARCHAR},
+      ExpectResults = #{expectresults,jdbcType=VARCHAR},
+      IS_TRANSFER_BB = #{isTransferBb,jdbcType=VARCHAR},
+      PROJECT_CODE = #{projectCode,jdbcType=VARCHAR},
+      NEED_RAISE_UNIT = #{needRaiseUnit,jdbcType=VARCHAR},
+      PRIMARY_PROJECT_NAME = #{primaryProjectName,jdbcType=VARCHAR},
+      IS_NEED_REDLINE_REPLY = #{isNeedRedlineReply,jdbcType=VARCHAR},
+      IS_PROCEDURE_READY = #{isProcedureReady,jdbcType=VARCHAR},
+      IS_IMAGE = #{isImage,jdbcType=VARCHAR},
+      IS_CLIMAX_PROJECT = #{isClimaxProject,jdbcType=VARCHAR},
+      CONTACT_PERSON = #{contactPerson,jdbcType=VARCHAR},
+      DESIGN_COMPANY = #{designCompany,jdbcType=VARCHAR},
+      PROJECT_MANAGER = #{projectManager,jdbcType=VARCHAR},
+      PROJECT_STATE_BB = #{projectStateBb,jdbcType=VARCHAR},
+      GROSS_INVESTMENT = #{grossInvestment,jdbcType=DOUBLE},
+      SQPSTime = #{sqpstime,jdbcType=TIMESTAMP},
+      PSTGTime = #{pstgtime,jdbcType=TIMESTAMP},
+      IS_ARRANGEMENT = #{isArrangement,jdbcType=VARCHAR},
+      PROBLEM_SCORE = #{problemScore,jdbcType=DOUBLE},
+      JKXL_DHXJ = #{jkxlDhxj,jdbcType=DOUBLE},
+      JKXL_TGSHUANGHXJ = #{jkxlTgshuanghxj,jdbcType=DOUBLE},
+      JKXL_TGSIHXJ = #{jkxlTgsihxj,jdbcType=DOUBLE},
+      JKXL_DHGZ = #{jkxlDhgz,jdbcType=DOUBLE},
+      JKXL_TGSHUANGHGZ = #{jkxlTgshuanghgz,jdbcType=DOUBLE},
+      JKXL_TGSIHGZ = #{jkxlTgsihgz,jdbcType=DOUBLE},
+      JKXL_GGG = #{jkxlGgg,jdbcType=DOUBLE},
+      DL_JM400 = #{dlJm400,jdbcType=DOUBLE},
+      DL_JM240 = #{dlJm240,jdbcType=DOUBLE},
+      DLTD_4K = #{dltd4k,jdbcType=DOUBLE},
+      DLTD_6K = #{dltd6k,jdbcType=DOUBLE},
+      DLTD_8K = #{dltd8k,jdbcType=DOUBLE},
+      DLTD_9K = #{dltd9k,jdbcType=DOUBLE},
+      DLTD_12K = #{dltd12k,jdbcType=DOUBLE},
+      DLTD_16K = #{dltd16k,jdbcType=DOUBLE},
+      DLTD_24K = #{dltd24k,jdbcType=DOUBLE},
+      DLTD_LG4K = #{dltdLg4k,jdbcType=DOUBLE},
+      DLTD_LG7K = #{dltdLg7k,jdbcType=DOUBLE},
+      DLJ_ZT = #{dljZt,jdbcType=INTEGER},
+      DLJ_ZJ = #{dljZj,jdbcType=INTEGER},
+      DLJ_SANJ = #{dljSanj,jdbcType=INTEGER},
+      DLJ_SIJ = #{dljSij,jdbcType=INTEGER},
+      DYJKXL_DHXJ = #{dyjkxlDhxj,jdbcType=DOUBLE},
+      DYJKXL_TGSHXJ = #{dyjkxlTgshxj,jdbcType=DOUBLE},
+      DYJKXL_DHGZ = #{dyjkxlDhgz,jdbcType=DOUBLE},
+      DYJKXL_TGSHGZ = #{dyjkxlTgshgz,jdbcType=DOUBLE},
+      DYDL_JM240 = #{dydlJm240,jdbcType=DOUBLE},
+      DYDL_JM150 = #{dydlJm150,jdbcType=DOUBLE},
+      BYQ_GSB200 = #{byqGsb200,jdbcType=INTEGER},
+      BYQ_GSB400 = #{byqGsb400,jdbcType=INTEGER},
+      BYQ_XB315 = #{byqXb315,jdbcType=INTEGER},
+      BYQ_XB500 = #{byqXb500,jdbcType=INTEGER},
+      BYQ_XB204 = #{byqXb204,jdbcType=INTEGER},
+      BYQ_PDF800 = #{byqPdf800,jdbcType=INTEGER},
+      BYQ_PDF1000 = #{byqPdf1000,jdbcType=INTEGER},
+      BYQ_PDF1250 = #{byqPdf1250,jdbcType=INTEGER},
+      HWHWG_2J2C = #{hwhwg2j2c,jdbcType=INTEGER},
+      HWHWG_2J4C = #{hwhwg2j4c,jdbcType=INTEGER},
+      ZSKG_ZDH = #{zskgZdh,jdbcType=INTEGER},
+      HNKGG_ZDH = #{hnkggZdh,jdbcType=INTEGER},
+      SQPSTimeIsUpdate = #{sqpstimeisupdate,jdbcType=INTEGER},
+      BackStatus = #{backstatus,jdbcType=VARCHAR},
+      BackFee = #{backfee,jdbcType=DOUBLE},
+      YLXTIME = #{ylxtime,jdbcType=TIMESTAMP},
+      Equipment_Switch = #{equipmentSwitch,jdbcType=VARCHAR},
+      DeleteByGLGJ = #{deletebyglgj,jdbcType=VARCHAR}
+    where PrjID = #{prjid,jdbcType=VARCHAR}
+  </update>
+</mapper>
